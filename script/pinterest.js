@@ -5,7 +5,7 @@ module.exports.config = {
   name: "pinterest",
   version: "1.0.0",
   role: 0,
-  hasPrefix: true,
+  hasPrefix: false,
   description: "Search for images on Pinterest.",
   usages: "pinterest [query] - [amount]",
   credits: "Developer",
@@ -78,4 +78,4 @@ module.exports.run = async function({
       console.log(error);
     }
   }
-}
+        }
