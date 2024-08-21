@@ -33,7 +33,7 @@ module.exports.run = async function({
       eventCommands.forEach((eventCommand, index) => {
         helpMessage += `\t${index + 1}. 「 ${prefix}${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. Pour afficher la page suivante, tapez'${prefix}help numéro de page.'.To view information about a specific command, type '${prefix}help command name'.`;
+      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. Pour afficher la page suivante, tapez'${prefix}help numéro de page.'. En cas de difficultés avec la commande ou pour obtenir plus d'informations, veuillez contacter l'admin.'.`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
