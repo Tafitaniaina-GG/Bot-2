@@ -20,7 +20,7 @@ module.exports.run = async function({
   const {
     question,
     answer
-  } = (await axios.get('https://quiz-6rhj.onrender.com/api/quiz/qz?category=english')).data;
+  } = (await axios.get('https://quiz-6rhj.onrender.com/api/quiz/qz?category=french')).data;
   api.sendMessage(question, event.threadID, function(err, info) {
     return Utils.handleReply.push({
       type: "quiz",
