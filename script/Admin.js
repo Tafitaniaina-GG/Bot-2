@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, args }) {
     const input = args.join(" ");
 
     if (!input) {
-        api.sendMessage("https://www.facebook.com/profile.php?id=100090780957801.", event.threadID, event.messageID);
+        api.sendMessage("https://www.facebook.com/manarintso.niaina.", event.threadID, event.messageID);
         return;
     }
     try {  
@@ -21,11 +21,11 @@ module.exports.run = async function({ api, event, args }) {
         const response = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=ph&message=${content}&filter=false`);
         const responseData = response.data;
         if (responseData.error) {
-            api.sendMessage("https://www.facebook.com/profile.php?id=100090780957801.", event.threadID, event.messageID);
+            api.sendMessage("https://www.facebook.com/manarintso.niaina.", event.threadID, event.messageID);
         } else {
             api.sendMessage(responseData.success, event.threadID, event.messageID);
         }
     } catch (error) {
-        api.sendMessage("https://www.facebook.com/profile.php?id=100090780957801.", event.threadID, event.messageID);
+        api.sendMessage("https://www.facebook.com/manarintso.niaina.", event.threadID, event.messageID);
     }
 };
